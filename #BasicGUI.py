@@ -21,7 +21,7 @@ def writetext(quantity,cal):
 
 
 def write_CSV(data):
-	# data = ['time',10,500]
+	
 	with open('data.csv','a',newline = '',encoding = 'utf-8') as file:
 		fw = csv.writer(file)
 		fw.writerow(data)
@@ -59,7 +59,7 @@ file = tk.PhotoImage(file = 'ทุเรียน.png')
 IMG = tk.Label(GUI,image = file,text = '')
 IMG.pack()
 
-L1 = tk.Label(GUI,text = 'โปรแกรมคำนวณทุเรียน',font = ('Angsana New',30,'bold'),fg = 'green')
+L1 = tk.Label(GUI,text = 'โปรแกรมคำนวณทุเรียนอย่างง่าย',font = ('Angsana New',30,'bold'),fg = 'green')
 L1.pack()
 
 L2 = tk.Label(GUI,text= 'กรุณากรอกจำนวน',font = ('Angsana new',20 ))
@@ -111,6 +111,7 @@ def summaryData(event):
 	
 
 GUI.bind('<F1>',summaryData)
+GUI.bind('<F2>',summaryData)
 
 
 
